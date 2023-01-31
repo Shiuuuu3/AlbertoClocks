@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="angular.min.js"></script>  
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js">
+        </script>
+
+        <link rel="stylesheet" href="css/watches.css">
+        <link href='https://fonts.googleapis.com/css?family=Spartan'
+            rel='stylesheet'>
+        <script type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp">
+            <section id="header">
+                <a href="index.html" class="logo">
+                    <img src="image/Logo/Arberto.png" alt="" class="img-logo">
+                    <p class="text-logo"><h3>Arberto Clocks</h3></p>
+                </a>
+                <div>
+                    <ul id="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="watches.html" class="active">Watches</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="banner">
+                <h2 class="text-banner">Choose Your Watch According To Your
+                    Style</h2>
+                <h3 class="text-banner">On All Products</h2>
+
+                <button>Buy Now</button>
+            </section>
+           
+            <div>
+                <div ng-view> </div>
+            </div> <section id="pagination" class="section-p1">
+                <a href="#/!">1</a>
+                <a href="#!b">2</a>
+                <a href="#!c"><ion-icon name="arrow-forward-outline" class="icon"></ion-icon></a>
+            </section>
+
+
+
+            <script src="script.js"></script>
+            <div ng-include="'footer.html'"></div>
+            <script>
+                    var app = angular.module("myApp", ["ngRoute"]);
+                    app.config(function($routeProvider){
+                        $routeProvider
+                            .when("/", {templateUrl:"page1.html"})
+                            .when("/b", {templateUrl:"page2.html"})
+                            .when("/c", {templateUrl:"page3.html"})
+
+
+        });
+           </script>
+        </div>
+    </body>
+</html>
