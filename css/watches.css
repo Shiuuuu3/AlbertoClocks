@@ -306,3 +306,6 @@ body {
 #detail .product-detail-text span{
     line-height: 25px;
 }
+.page-details{
+    text-decoration: none;
+}
