@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <script src="angular.min.js"></script>
-    <link rel="stylesheet" href="/hung/css/home.css">
-    <link rel="stylesheet" href="/hung/css/header.css">
-    <link rel="stylesheet" href="/hung/css/reset.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/watches.css">
 
     <link
       rel="stylesheet"
@@ -57,8 +58,61 @@
 
 <body>
     <div ng-app>
-        <div ng-include="'hung/header.html'"></div>
-
+        <section id="header">
+            <a href="index.html" class="logo">
+                <img src="image/Logo/Arberto.png" alt="" class="img-logo">
+                <p class="text-logo"><h3>Arberto Clocks</h3></p>
+            </a>
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="watches.html" class="active">Watches</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li>
+                </ul>
+                <ul id="navbar-btn">
+                    <label for="nav-mobile-input" >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0
+                            448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32
+                                14.3 32 32s-14.3 32-32 32H32C14.3 128 0
+                                113.7 0 96zM0 256c0-17.7 14.3-32
+                                32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32
+                                32H32c-17.7 0-32-14.3-32-32zM448 416c0
+                                17.7-14.3 32-32 32H32c-17.7
+                                0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32
+                                14.3 32 32z"/></svg>
+                            </label>
+                    </ul>
+                    <input hidden type="checkbox" id="nav-mobile-input" class="nav-input">
+                <label for="nav-mobile-input" id="overlay">
+                </label>
+                <ul id="navbar-mobile">
+                        <label for="nav-mobile-input"  class="close">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
+                                    d="M256 512c141.4 0 256-114.6
+                                    256-256S397.4 0 256 0S0 114.6 0
+                                    256S114.6 512 256 512zM175 175c9.4-9.4
+                                    24.6-9.4 33.9 0l47 47 47-47c9.4-9.4
+                                    24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47
+                                    47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6
+                                    9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6
+                                    9.4-33.9 0s-9.4-24.6
+                                    0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6
+                                    0-33.9z"/></svg>
+                            </label>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="watches.html" class="active">Watches</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li>
+                    </ul>
+                    </div>
+                </section>
     <table>
         <tr>
             <td>
@@ -243,7 +297,7 @@
     <br>
     <button><a href="hung/index.html">&#8592 Go Back</a></button>
     <br>
-    <div ng-include="'hung/footer.html'"></div>
+     <div ng-include="'footer.html'"></div>
     </div>
 </body>
 </html
