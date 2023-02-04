@@ -7,14 +7,14 @@ Project title: Alberto Clocks
 
 4 collaborators:
 
-Student1397174  Lê Hải Sơn  
-Student1396931  Lê Gia Kiệt 
-Student1396934  Nguyễn Xuân Dương
-Student1396507  Nguyễn Danh Hưng
+Student1424198  Lê Gia Kiệt 
+Student1424176  Lê Hải Sơn  
+Student1427717  Nguyễn Xuân Dương
+Student1424193  Nguyễn Danh Hưng
 
 ============================
 
-eProject documentation at https://github.com/lnnhi1310/Kitchen-Appliances/tree/main/documentary
+eProject documentation at https://github.com/Shiuuuu3/AlbertoClocks/tree/main/document
 
 ============================
 
