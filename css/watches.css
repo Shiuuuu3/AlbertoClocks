@@ -383,6 +383,12 @@ transform: translateX(100%);
     #navbar{
         display: none;
     }
+
+    #banner .text-banner {
+        font-size: 15px;
+        width: 2000px;
+
+    }
 }
 @keyframes fadeIn {
     from{
