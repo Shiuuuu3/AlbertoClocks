@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/watches.css">
 
     <link
@@ -58,6 +59,7 @@
 
 <body>
     <div ng-app>
+
         <section id="header">
             <a href="index.html" class="logo">
                 <img src="image/Logo/Arberto.png" alt="" class="img-logo">
@@ -66,8 +68,13 @@
             <div>
                 <ul id="navbar">
                     <li><a href="index.html">Home</a></li>
+
                     <li><a href="watches.html" >Watches</a></li>
                     <li><a href="blog.html" class="active">Blog</a></li>
+
+                    <li><a href="watches.html" class="active">Watches</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contacts</a></li>
                     <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li>
@@ -295,9 +302,9 @@
         </tr>
     </table>
     <br>
-    <button><a href="hung/index.html">&#8592 Go Back</a></button>
+    <button><a href="index.html">&#8592 Go Back</a></button>
     <br>
-     <div ng-include="'footer.html'"></div>
+    <div ng-include="'footer.html'"></div>
     </div>
 </body>
 </html
