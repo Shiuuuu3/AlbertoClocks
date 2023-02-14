@@ -6,25 +6,171 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js">
+    </script>
+    <script src="angular.min.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/watches.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
     <style>
-        body {
-            background-image: linear-gradient(#bdc3c7,#2c3e50);
+        body{
+            background-color: gold;
+        }
+        td {
+            background-color: aliceblue;
+            padding-right: 50px;
+            padding-left: 20px;
+            padding-bottom: 20px;
         }
 
-        div {
-            margin-top: 100px;
-            margin-bottom: 100px;
+        .a {
+            margin-left: 10px;
+        }
+
+        .b {
+            margin-left: 26px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .ct {
+            padding-top: 30px;
+            padding-left: 100px;
+            padding-bottom: 30px;
+        }
+
+        p {
+            padding-left: 100px;
+        }
+
+        .ab {
+            text-align: end;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319281359241!2d106.6640856145208!3d10.78684006195166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1sen!2s!4v1670659691880!5m2!1sen!2s"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <div ng-app="myApp">
+        <section id="header">
+            <a href="index.html" class="logo">
+                <img src="image/Logo/Arberto.png" alt="" class="img-logo">
+                <p class="text-logo">
+                    <h3>Arberto Clocks</h3>
+                </p>
+            </a>
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="watches.html" class="active">Watches</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a></li>
+                </ul>
+                <ul id="navbar-btn">
+                    <label for="nav-mobile-input">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0
+                            448 512">
+                            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32
+                                14.3 32 32s-14.3 32-32 32H32C14.3 128 0
+                                113.7 0 96zM0 256c0-17.7 14.3-32
+                                32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32
+                                32H32c-17.7 0-32-14.3-32-32zM448 416c0
+                                17.7-14.3 32-32 32H32c-17.7
+                                0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32
+                                14.3 32 32z" />
+                        </svg>
+                    </label>
+                </ul>
+                <input hidden type="checkbox" id="nav-mobile-input" class="nav-input">
+                <label for="nav-mobile-input" id="overlay">
+                </label>
+                <ul id="navbar-mobile">
+                    <label for="nav-mobile-input" class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M256 512c141.4 0 256-114.6
+                                    256-256S397.4 0 256 0S0 114.6 0
+                                    256S114.6 512 256 512zM175 175c9.4-9.4
+                                    24.6-9.4 33.9 0l47 47 47-47c9.4-9.4
+                                    24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47
+                                    47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6
+                                    9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6
+                                    9.4-33.9 0s-9.4-24.6
+                                    0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6
+                                    0-33.9z" />
+                        </svg>
+                    </label>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="watches.html" class="active">Watches</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="#">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="ct">
+            <table>
+                <tr>
+
+                    <td class="ab"><img src="/image/Logo/Arberto.png" alt=""></td>
+                    <td row span="3"> <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319281359241!2d106.6640856145208!3d10.78684006195166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2s FPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1 sen!2s!4v1670659691880!5m2!1 sen!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </td>
+                </tr>
+                <td><a
+                        href="https://www.google.com/maps/place/590+%C4%90.+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+8,+Ph%C6%B0%E1%BB%9Dng+11,+Qu%E1%BA%ADn+3,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.786377,106.6641083,17z/data=!3m1!4b1!4m6!3m5!1s0x31752ed23c80767d:0x5a981a5efee9fd7d!8m2!3d10.786377!4d106.666297!16s%2Fg%2F11hbghrfd_">
+                        <ion-icon name="pin"></ion-icon>AlbertoClocks <br>
+                    </a> 590 Cach Mang Thang 8 Street, <br> Ward 11, District 3, Ho Chi Minh City </td>
+                <td class="p">Thanks for contacting us!!! <br>We will reply as quickly as possible, hope you can wait a while and have a nice day.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ion-icon name="call"></ion-icon><span class="a">+84 123 456 789</span> <br><span class="b">+84
+                            987 654 321</span>
+                    </td>
+                    <td ></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <ion-icon name="mail"></ion-icon>
+                        AlbertoClocks@gmail.com
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div ng-include="'footer.html'"></div>
 </body>
 
 </html>
